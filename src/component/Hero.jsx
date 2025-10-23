@@ -29,6 +29,7 @@ const Hero = () => {
 
     useGSAP(() =>{
         gsap.to('#hero',{opacity:1 ,delay:1.5 })
+        gsap.to('#cta',{opacity:1 ,y:-50 ,delay:2})
     },[])
   return (
     <section className='w-full nav-height bg-black relative'>
@@ -40,8 +41,8 @@ const Hero = () => {
              </video>
          </div>
        </div>
-        <div className='flex flex-col items-center opacity-0 translate-y-20'>
-          <a href='#highlights' className='btn'>Buy</a>
+        <div id="cta"className='flex flex-col items-center opacity-0 translate-y-20'>
+          <a href='#highlights' className=' border border-gray text-white bg-transparent px-7 py-2 rounded-full hover:bg-white hover:text-black transition duration-300'>Buy</a>
           <p className='font-normal text-xl'> From $199/month or $999</p>
         </div>
        
