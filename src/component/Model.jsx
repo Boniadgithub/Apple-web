@@ -1,0 +1,21 @@
+import { useGSAP } from '@gsap/react'
+import React from 'react'
+import gsap from "gsap";
+
+
+const Model = () => {
+    useGSAP(()=>{
+        gsap.to('#heading',{y:0, opacity:1})
+    }, [])
+  return (
+    <section className='common-padding'>
+      <div className='screen-max-width'>
+             <h1 className='section-heading' id="heading">
+                Take it closer look.
+             </h1>
+      </div>
+    </section>
+  )
+}
+
+export default Model
